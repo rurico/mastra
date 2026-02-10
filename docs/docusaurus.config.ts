@@ -53,9 +53,9 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'models',
-        path: 'src/content/en/models',
+        path: 'src/content/cn/models',
         routeBasePath: 'models',
-        sidebarPath: './src/content/en/models/sidebars.js',
+        sidebarPath: './src/content/cn/models/sidebars.js',
         editUrl: 'https://github.com/mastra-ai/mastra/tree/main/docs',
         remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), NPM2YARN_CONFIG]],
       },
@@ -64,9 +64,9 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'guides',
-        path: 'src/content/en/guides',
+        path: 'src/content/cn/guides',
         routeBasePath: 'guides',
-        sidebarPath: './src/content/en/guides/sidebars.js',
+        sidebarPath: './src/content/cn/guides/sidebars.js',
         editUrl: 'https://github.com/mastra-ai/mastra/tree/main/docs',
         remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), NPM2YARN_CONFIG]],
       },
@@ -75,9 +75,9 @@ const config: Config = {
       '@docusaurus/plugin-content-docs',
       {
         id: 'reference',
-        path: 'src/content/en/reference',
+        path: 'src/content/cn/reference',
         routeBasePath: 'reference',
-        sidebarPath: './src/content/en/reference/sidebars.js',
+        sidebarPath: './src/content/cn/reference/sidebars.js',
         editUrl: 'https://github.com/mastra-ai/mastra/tree/main/docs',
         remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), NPM2YARN_CONFIG]],
       },
@@ -98,9 +98,9 @@ const config: Config = {
       'classic',
       {
         docs: {
-          path: 'src/content/en/docs',
+          path: 'src/content/cn/docs',
           routeBasePath: 'docs',
-          sidebarPath: './src/content/en/docs/sidebars.js',
+          sidebarPath: './src/content/cn/docs/sidebars.js',
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl: 'https://github.com/mastra-ai/mastra/tree/main/docs',
@@ -124,6 +124,42 @@ const config: Config = {
     image: 'img/og-image.png',
     colorMode: {
       respectPrefersColorScheme: true,
+    },
+    navbar: {
+      items: [
+        {
+          type: 'docSidebar',
+          sidebarId: 'docsSidebar',
+          position: 'left',
+          docId: 'index',
+          to: '/docs/',
+        },
+        {
+          to: '/models',
+          label: 'Models',
+          position: 'left',
+        },
+        {
+          to: '/guides',
+          label: 'Guides & Migrations',
+          position: 'left',
+        },
+        {
+          to: '/reference',
+          label: 'Reference',
+          position: 'left',
+        },
+        {
+          to: '/showcase',
+          label: 'Showcase',
+          position: 'left',
+        },
+        {
+          href: 'https://github.com/mastra-ai/mastra',
+          label: 'GitHub',
+          position: 'right',
+        },
+      ],
     },
     prism: {
       // @ts-expect-error: FIXME
